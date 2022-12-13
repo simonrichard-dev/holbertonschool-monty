@@ -20,7 +20,7 @@ int main(int argc, char const *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
-	get_op();
+	get_op(argv[0]);
 
 	return (0);
 }
