@@ -9,6 +9,8 @@ void (*get_op(char *cmd))(stack_t **stack, unsigned int line_number)
 {
 	unsigned int i = 0;
 
+	(void)line_number;
+
 	instruction_t ops[] = {
 		{"push", stack_push},
 		{"pall", stack_pall},
