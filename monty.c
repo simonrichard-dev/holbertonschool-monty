@@ -15,7 +15,7 @@ int main(int argc, char const *argv[])
 		return (EXIT_FAILURE);
 	}
 
-	if (fopen(argv[1], O_RDONLY) == NULL)
+	if (fopen(argv[1], "r") == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
