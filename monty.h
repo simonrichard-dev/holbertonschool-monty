@@ -36,7 +36,7 @@ typedef struct instruction_s
 } instruction_t;
 
 
-void (*get_op(char *cmd))(stack_t **stack, unsigned int line_number);
+void get_op(char *cmd, stack_t **stack, unsigned int line_number);
 void stack_push(stack_t **stack, unsigned int line_number);
 void stack_pall(stack_t **stack, unsigned int line_number);
 
