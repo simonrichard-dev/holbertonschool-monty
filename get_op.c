@@ -12,6 +12,8 @@ void get_op(char *cmd, stack_t **stack, unsigned int line_number)
 	instruction_t ops[] = {
 		{"push", stack_push},
 		{"pall", stack_pall},
+		{"pop", stack_pop},
+		{"swap", stack_swap},
 		{NULL, NULL}
 	};
 
