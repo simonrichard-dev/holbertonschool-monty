@@ -10,7 +10,6 @@ int get_op(char *cmd, stack_t **stack, unsigned int line_number)
 	unsigned int i = 0;
 
 	instruction_t ops[] = {
-		{"push", stack_push},
 		{"pall", stack_pall},
 		{"pop", stack_pop},
 		{"swap", stack_swap},
@@ -22,7 +21,7 @@ int get_op(char *cmd, stack_t **stack, unsigned int line_number)
 		if (strcmp(cmd, ops[i].opcode) == 0)
 		{
 			ops[i].f(stack, line_number);
-			return;
+			return (EXIT_SUCCESS);
 		}
 	}
 	fprintf(stderr, "L%u: unknown instruction %s\n", line_number, cmd);
