@@ -14,14 +14,12 @@
 
 void stack_push(char *token, stack_t **stack, unsigned int line_number)
 {
-<<<<<<< HEAD
 	stack_t *new = NULL;
 	int i;
 
 	if (token == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
-=======
 	int i;
 	stack_t *node;
 
@@ -48,7 +46,6 @@ void stack_push(char *token, stack_t **stack, unsigned int line_number)
 	if (node == NULL)
 	{
 		perror("Error: malloc failed\n");
->>>>>>> e23937a36240522e8c888e80d99885d5ed884de9
 		error = 1;
 		return;
 	}
@@ -65,7 +62,6 @@ void stack_push(char *token, stack_t **stack, unsigned int line_number)
 	}
 	new = malloc(sizeof(stack_t));
 
-<<<<<<< HEAD
 	if (new == NULL)
 	{
 		perror("Error: malloc failed\n");
@@ -82,7 +78,6 @@ void stack_push(char *token, stack_t **stack, unsigned int line_number)
 		new->next = *stack;
 	}
 	*stack = new;
-=======
 	node->n = atoi(token);
 	node->prev = NULL;
 	node->next = NULL;
@@ -93,5 +88,4 @@ void stack_push(char *token, stack_t **stack, unsigned int line_number)
 		node->next = *stack;
 	}
 	*stack = node;
->>>>>>> e23937a36240522e8c888e80d99885d5ed884de9
 }

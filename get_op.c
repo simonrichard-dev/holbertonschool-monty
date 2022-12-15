@@ -2,13 +2,8 @@
 /**
  * get_op - get opcode function
  * @cmd: opcode command
-<<<<<<< HEAD
- * @stack: data structure
- * @line_number: number of the line to show
-=======
  * @stack: the list
  * @line_number: number of line of the command
->>>>>>> e23937a36240522e8c888e80d99885d5ed884de9
  * Return: function
  */
 
@@ -16,11 +11,8 @@ int get_op(char *cmd, stack_t **stack, unsigned int line_number)
 {
 	instruction_t ops[] = {
 		{"pall", stack_pall},
-<<<<<<< HEAD
 		{"push", stack_push},
-=======
 		{"pint", stack_pint},
->>>>>>> e23937a36240522e8c888e80d99885d5ed884de9
 		{"pop", stack_pop},
 		{"swap", stack_swap},
 		{"add", stack_add},
