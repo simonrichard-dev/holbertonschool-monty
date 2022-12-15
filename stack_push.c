@@ -20,8 +20,6 @@ void stack_push(char *token, stack_t **stack, unsigned int line_number)
 	if (token == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
-	int i;
-	stack_t *node;
 
 	if (token == NULL)
 	{
