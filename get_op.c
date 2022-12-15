@@ -19,6 +19,7 @@ int get_op(char *cmd, stack_t **stack, unsigned int line_number)
 		{"sub", stack_sub},
 		{"div", stack_div},
 		{"mul", stack_mul},
+		{"mod", stack_mod},
 		{NULL, NULL}
 	};
 
