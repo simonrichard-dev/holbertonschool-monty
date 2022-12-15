@@ -15,7 +15,7 @@ int main(int argc, char const **argv)
 	char *line = NULL, *token = NULL;
 	size_t size = 0;
 	stack_t *stack = NULL;
-	unsigned int line_nuber = 0;
+	unsigned int line_number = 0;
 
 	if (argc != 2) /*check the argc input value*/
 	{
