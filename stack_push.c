@@ -15,6 +15,7 @@ void stack_push(char *token, stack_t **stack, unsigned int line_number)
 	if (token == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		error = 1;
 		return;
 	}
 	for (i = 0; token[i] != '\0'; i++)
@@ -24,6 +25,7 @@ void stack_push(char *token, stack_t **stack, unsigned int line_number)
 		if (isdigit(token[i]) == 0)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
+			error = 1;
 			return;
 		}
 	}
@@ -32,8 +34,9 @@ void stack_push(char *token, stack_t **stack, unsigned int line_number)
 
 	if (node == NULL)
 	{
-		fprintf(stderr, "Error: malloc failed\n");
-		exit(EXIT_FAILURE);
+		perror("Error: malloc failed\n");
+		error = 1;
+		return;
 	}
 
 	node->n = atoi(token);

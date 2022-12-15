@@ -15,7 +15,7 @@ int main(int argc, char const **argv)
 	char *line = NULL, *token = NULL;
 	size_t size = 0;
 	stack_t *stack = NULL;
-	unsigned int line_num = 0;
+	unsigned int line_nuber = 0;
 
 	if (argc != 2) /*check the argc input value*/
 	{
@@ -30,17 +30,17 @@ int main(int argc, char const **argv)
 	}
 	while (getline(&line, &size, ptr) != -1 && error != 1) /*begin a loop that find what to do*/
 	{
-		line_num++;
+		line_number++;
 		token = strtok(line, "\n\t ");
 		if (token == NULL || strncmp(token, "#", 1) == 0)
 			continue;
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\n\t ");
-			stack_push(token, &stack, line_num); /*remplacer par le bon nom de fonction*/
+			stack_push(token, &stack, line_number); /*remplacer par le bon nom de fonction*/
 		}
 		else
-			get_op(token, &stack, line_num); /*remplacer par la bonne fonction*/
+			get_op(token, &stack, line_number); /*remplacer par la bonne fonction*/
 	}
 	free_all(stack, line, ptr); /*remplacer par la bonne fonction*/
 	if (error == 1)
