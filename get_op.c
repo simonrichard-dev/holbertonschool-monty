@@ -5,7 +5,7 @@
  * Return: function
  */
 
-void get_op(char *cmd, stack_t **stack, unsigned int line_number)
+int get_op(char *cmd, stack_t **stack, unsigned int line_number)
 {
 	unsigned int i = 0;
 
