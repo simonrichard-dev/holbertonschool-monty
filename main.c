@@ -28,7 +28,8 @@ int main(int argc, char const **argv)
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (getline(&line, &size, ptr) != -1 && error != 1) /*begin a loop that find what to do*/
+	/*begin a loop that find what to do*/
+	while (getline(&line, &size, ptr) != -1 && error != 1)
 	{
 		line_number++;
 		token = strtok(line, "\n\t ");
@@ -37,7 +38,7 @@ int main(int argc, char const **argv)
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\n\t ");
-			stack_push(token, &stack, line_number); /*remplacer par le bon nom de fonction*/
+			stack_push(token, &stack, line_number);
 		}
 		else
 			get_op(token, &stack, line_number); /*remplacer par la bonne fonction*/

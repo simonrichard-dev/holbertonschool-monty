@@ -2,6 +2,7 @@
 
 /**
  * stack_push - push an element to a stack
+ * @token: token
  * @stack: stack to push to
  * @line_number: line to push stack to
  * Return: 0 or EXIT_FAILURE

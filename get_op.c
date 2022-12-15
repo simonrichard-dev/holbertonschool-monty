@@ -2,6 +2,8 @@
 /**
  * get_op - get opcode function
  * @cmd: opcode command
+ * @stack: the list
+ * @line_number: number of line of the command
  * Return: function
  */
 
