@@ -7,7 +7,7 @@
  * Return: always 0
  */
 
-void pop_stack(stack_t **stack, unsigned int line_number)
+void stack_pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
 
