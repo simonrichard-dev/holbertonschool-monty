@@ -1,12 +1,19 @@
 #ifndef _MONTY_H_
-#define _MONTY_H_
+#define _MONTY_H
+
+#define _GNU_SOURCE_
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#include <signal.h>
 #include <stddef.h>
+#include <stdlib.h>
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <ctype.h>
+
+extern int error;
 
 
 /**
@@ -40,10 +47,11 @@ typedef struct instruction_s
 } instruction_t;
 
 
-void get_op(char *cmd, stack_t **stack, unsigned int line_number);
-void stack_push(stack_t **stack, unsigned int line_number);
+int get_op(char *cmd, stack_t **stack, unsigned int line_number);
+void stack_push(char *token, stack_t **stack, unsigned int line_number);
 void stack_pall(stack_t **stack, unsigned int line_number);
 void stack_pop(stack_t **stack, unsigned int line_number);
 void stack_swap(stack_t **stack, unsigned int line_number);
+void free_all(stack_t *stack, char *line, FILE *ptr);
 
 #endif
