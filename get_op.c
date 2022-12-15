@@ -13,6 +13,7 @@ int get_op(char *cmd, stack_t **stack, unsigned int line_number)
 
 	instruction_t ops[] = {
 		{"pall", stack_pall},
+		{"pint", stack_pint},
 		{"pop", stack_pop},
 		{"swap", stack_swap},
 		{NULL, NULL}
