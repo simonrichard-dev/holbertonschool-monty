@@ -7,7 +7,7 @@
  * Return: 0 or EXIT_FAILURE
  */
 
-void stack_push(stack_t **stack, unsigned int line_number)
+void stack_push(char *token, stack_t **stack, unsigned int line_number)
 {
 	(void)line_number;
 
