@@ -56,6 +56,7 @@ void stack_swap(stack_t **stack, unsigned int line_number);
 void stack_add(stack_t **stack, unsigned int line_number);
 void stack_nop(stack_t **stack, unsigned int line_number);
 void stack_sub(stack_t **stack, unsigned int line_number);
+void stack_div(stack_t **stack, unsigned int line_number);
 void free_all(stack_t *stack, char *line, FILE *ptr);
 
 #endif
